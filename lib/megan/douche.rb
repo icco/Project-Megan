@@ -10,8 +10,8 @@ module Megan
       key :short, String, :required => true
       key :long, String
 
-      def getRecent
-         return []
+      def Douche.getRecent
+         return Array.new
       end
    end
 end

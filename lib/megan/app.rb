@@ -2,13 +2,18 @@ module Megan
   class App < Sinatra::Base
     set :root,     File.dirname(__FILE__) + "/../.."
     set :app_file, __FILE__
-    set :public, self.root + '/static'
+    set :static, true
+    set :public, Proc.new { File.join(root, "static") }
     enable :sessions
 
     include Megan
 
     get '/' do
        erb :index, :locals => { :recent => Douche.getRecent }
+    end
+
+    post '/' do
+       puts "Post received."
     end
 
     get '/view/:id' do
