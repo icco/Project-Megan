@@ -1,6 +1,7 @@
 mongo
 bson
 bson_ext
+mongo_mapper
 less
 sinatra --version 1.0
 rdiscount
