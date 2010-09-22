@@ -21,7 +21,7 @@ if ENV['MONGOHQ_HOST']
    MongoMapper.database.authenticate(ENV['MONGOHQ_USER'],ENV['MONGOHQ_PASSWORD'])
 else
    puts "Using local database" 
-   MongoMapper.database = 'tout-pour-mon-ipad'
+   MongoMapper.database = 'test-megan'
 end
 
 module Megan

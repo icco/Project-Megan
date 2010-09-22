@@ -13,7 +13,14 @@ module Megan
     end
 
     post '/' do
-       puts "Post received."
+      d =  Douche.new
+      d.name = params['name']
+      d.location = params['location']
+      d.short = params['short']
+      d.date = Time.new
+      d.password = Douche.randPW
+      p d
+      d.save
     end
 
     get '/view/:id' do
