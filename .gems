@@ -1,0 +1,7 @@
+mongo
+bson
+bson_ext
+less
+sinatra --version 1.0
+rdiscount
+github-markup

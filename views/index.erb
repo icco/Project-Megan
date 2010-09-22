@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <title>Project Megan</title>
+      <link href="/style.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+   </head>
+   <body>
+      <h1>Project Megan (witty logo here)</h1>
+      <form>
+         <label for="name">Who? </label>
+         <input type="text" name="name"></input>
+         <label for="location">Where?</label>
+         <input type="text" name="location"></input>
+         <textarea name="douche-short">Why (short version)?</textarea>
+         <input type="submit">
+      </form>
+
+      <% for douche in @recent %>
+         Name: <%= douche.name %><br/>
+         Location: <%= douche.location %><br/>
+         Why: <%= douche.short %><br/>
+      <% end %>
+      <script type=”text/javascript” src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+      <script type=”text/javascript” src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+      <script type=”text/javascript” src="static/stuff.js"></script>
+   </body>
+</html>
