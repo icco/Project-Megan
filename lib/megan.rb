@@ -42,7 +42,7 @@ module Megan
    end
 
    def self.logger
-      @logger ||= Logger.new('error.log', "daily").tap do |logger|
+      @logger ||= Logger.new('./log/error.log', "daily").tap do |logger|
          logger.formatter = LogFormatter.new
       end
    end
