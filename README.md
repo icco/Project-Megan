@@ -2,7 +2,10 @@
 
 <http://xkcd.com/796/>
 
-Ya we know... It's too soon.
+Project Megan (better name needed...) is a website based on the afore-mentioned
+comic to allow people to report people who are bad dates. We will allow users
+to post a short summary, and an optional long form story. All submissions will
+be anonymous but give the original author the ability to delete their post.
 
 ## Installation
 
