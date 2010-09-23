@@ -14,14 +14,25 @@ require 'github/markup'
 require 'megan/app'
 require 'megan/douche'
 
-puts "Running on MongoHQ" 
-MongoMapper.connection = Mongo::Connection.new('flame.mongohq.com', 27066)
-MongoMapper.database = 'project-megan'
-MongoMapper.database.authenticate(ENV['MONGOHQ_USER'],ENV['MONGOHQ_PASSWORD'])
 
 module Megan
    # Exists so we can do some base config on startup
    def self.new
+      dbs = {
+         :production => {
+            :db => "project-megan-production",
+            :port => 27025
+         },
+         :development => {
+            :db => "project-megan-development",
+            :port => 27024
+         }
+      }
+
+      MongoMapper.connection = Mongo::Connection.new('flame.mongohq.com', dbs[Megan::App.environment][:port])
+      MongoMapper.database = dbs[Megan::App.environment][:db]
+      MongoMapper.database.authenticate(ENV['MONGOHQ_USER'], ENV['MONGOHQ_PASSWORD'])
+      self.log "Running on MongoHQ: #{dbs[Megan::App.environment].inspect}" 
    end
 
    # This logging stuff was stolen from kneath's WatchTower 
@@ -30,7 +41,7 @@ module Megan
    end
 
    def self.logger
-      @logger ||= Logger.new(config[:log], "daily").tap do |logger|
+      @logger ||= Logger.new('error.log', "daily").tap do |logger|
          logger.formatter = LogFormatter.new
       end
    end
