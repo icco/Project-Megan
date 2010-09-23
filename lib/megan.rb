@@ -1,9 +1,9 @@
 $:.unshift File.expand_path(File.dirname(__FILE__))
 
+# Gems
 require 'rubygems'
 require 'sinatra/base'
 require 'logger'
-
 require 'mongo'
 require 'mongo_mapper'
 require 'digest/sha1'
@@ -11,10 +11,11 @@ require 'less'
 require 'rdiscount'
 require 'github/markup'
 
+# our stuff
 require 'megan/app'
 require 'megan/douche'
 
-
+# The namespace and module definition.
 module Megan
    # Exists so we can do some base config on startup
    def self.new

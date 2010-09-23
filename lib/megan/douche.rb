@@ -1,5 +1,9 @@
-# The actual document storred in the DB
+  
 module Megan 
+   
+   # This class deals with individual people that our community does not like.
+   # It is stored in the MongoDB using MongoMapper to deal with the actual
+   # storage.
    class Douche
       include MongoMapper::Document
       key :name, String, :required => true
