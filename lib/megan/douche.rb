@@ -10,8 +10,20 @@ module Megan
       key :short, String, :required => true
       key :long, String
 
+      def link
+         return "/view/#{self.id}/"
+      end
+
+      def id
+         return self._id
+      end
+
+      def Douche.build id
+         return id ? Douche.find(id) : nil
+      end
+
       def Douche.getRecent
-         return Array.new
+         return Douche.all(:limit => 5, :order => 'date')
       end
 
       def Douche.randPW

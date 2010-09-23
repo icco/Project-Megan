@@ -19,14 +19,14 @@ module Megan
       d.short = params['short']
       d.date = Time.new
       d.password = Douche.randPW
-      p d
+      Megan.log d.inspect
       d.save
     end
 
-    get '/view/:id' do
+    get '/view/:id/?' do
        p = Douche.build params[:id]
        if p
-          erb :view, :locals => { :post => p }
+          erb :view, :locals => { :douche => p }
        else
           status 404
           "Not found"

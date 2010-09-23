@@ -32,10 +32,10 @@ module Megan
       MongoMapper.connection = Mongo::Connection.new('flame.mongohq.com', dbs[Megan::App.environment][:port])
       MongoMapper.database = dbs[Megan::App.environment][:db]
       MongoMapper.database.authenticate(ENV['MONGOHQ_USER'], ENV['MONGOHQ_PASSWORD'])
-      self.log "Running on MongoHQ: #{dbs[Megan::App.environment].inspect}" 
+      self.log "Running on MongoHQ: #{dbs[Megan::App.environment].inspect}"
    end
 
-   # This logging stuff was stolen from kneath's WatchTower 
+   # This logging stuff was stolen from kneath's WatchTower
    def self.log(message, &block)
       logger.info(message, &block)
    end
