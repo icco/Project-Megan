@@ -8,7 +8,7 @@ Ya we know... It's too soon.
 
 Install the gems by running:
 
-    `sudo gem install `cat .gems`
+    sudo gem install `cat .gems`
 
 This will install the following:
 
@@ -30,7 +30,7 @@ You'll also need the following if you want to test "quickly":
 
 I love the concept of [README driven development][rdd], but I usually follow it
 by using a whiteboard with a list of features I want and stuff I still need to
-code, instead of actually writting something coherent. So this is my space in
+code, instead of actually writing something coherent. So this is my space in
 the Readme to deal with that.
 
 __TODO__:
@@ -39,11 +39,40 @@ __TODO__:
  * add support for user images
  * deal with editing/deleting via the password
  * link from view page back to index
- * validate incomming data
+ * validate incoming data
  * email password -- Maybe...
  * clean up code, write better documentation.
  * add support for markdown in long
    * write a sinatra helper to parse markdown
 
+## Authors
+
+ * Nat Welch
+
+## License
+
+[The MIT License][cc-mit]
+
+Copyright (c) 2010 Nathaniel Welch
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
 [rdd]: http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
+[cc-mit]: http://creativecommons.org/licenses/MIT/
 
