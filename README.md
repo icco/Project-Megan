@@ -6,20 +6,25 @@ Ya we know... It's too soon.
 
 ## Installation
 
- * Install the gems by running `sudo gem install \`cat .gems\``
+Install the gems by running:
 
-   * mongo
-   * bson
-   * bson_ext
-   * mongo_mapper
-   * less
-   * sinatra
-   * rdiscount
-   * github-markup
+    `sudo gem install `cat .gems`
 
- * You'll also need the following if you want to test "quickly":
-   * rake
-   * shotgun
+This will install the following:
+
+ * mongo
+ * bson
+ * bson_ext
+ * mongo_mapper
+ * less
+ * sinatra
+ * rdiscount
+ * github-markup
+
+You'll also need the following if you want to test "quickly":
+
+ * rake
+ * shotgun
 
 ## Features Needed
 
