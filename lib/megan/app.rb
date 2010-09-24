@@ -4,6 +4,8 @@ module Megan
    # The sinatra app. This defines all of the the routes and views and stuff.
    # This is the first responder as well.
    class App < Sinatra::Base
+      require "sinatra/reloader" if development?
+
       set :root,     File.dirname(__FILE__) + "/../.."
       set :app_file, __FILE__
       set :static, true
@@ -39,7 +41,7 @@ module Megan
          end
       end
 
-      get '/style.css' do
+      get '/css/style.css' do
          content_type 'text/css', :charset => 'utf-8'
          #response['Expires'] = (Time.now + 60*60*24*356*3).httpdate
          less :style

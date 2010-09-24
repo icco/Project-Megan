@@ -27,7 +27,7 @@ module Megan
       end
 
       def Douche.getRecent
-         return Douche.all(:limit => 5, :order => 'date')
+         return Douche.all(:limit => 5, :order => 'date desc')
       end
 
       def Douche.randPW

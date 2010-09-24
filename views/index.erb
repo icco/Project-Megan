@@ -1,29 +1,39 @@
 <html>
    <head>
       <title>Project Megan</title>
-      <link href="/style.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+      <link href="/css/style.css?v=1" media="screen" rel="stylesheet" type="text/css" />
    </head>
    <body>
-      <h1>Project Megan (witty logo here)</h1>
-      <form id="theForm" method="post">
-         <label for="name">Who? </label>
-         <input type="text" name="name"></input>
-         <label for="location">Where?</label>
-         <input type="text" name="location"></input>
-         <textarea name="short">Why (short version)?</textarea>
-         <input type="submit">
-      </form>
-
-      <% for douche in recent %>
-         <div class="jerk">
-            Name: <%= douche.name %><br/>
-            Location: <%= douche.location %><br/>
-            Why: <%= douche.short %><br/>
-            <a href="<%= douche.link %>">More Info...</a>
+      <div id="container">
+         <div id="head">
+            <h1>Project Megan (witty logo here)</h1>
          </div>
-      <% end %>
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
-      <script type="text/javascript" src="/js/stuff.js?v=1"></script>
-   </body>
-</html>
+         <div id="form">
+            <form id="theForm" method="post">
+               My ex, <input type="text" name="name"></input>, <br />
+               who lives in <input type="text" name="location"></input>, <br />
+               is someone you should not date because <br />
+               <textarea tabindex="1" autocomplete="off" name="short" rows="2" cols="40"></textarea><br />
+               <input type="submit" value="Tell The World">
+            </form>
+         </div>
+         <div id="douches">
+
+            <% for douche in recent %>
+               <div class="jerk">
+                  <div class="jerk-short">
+                     "<%= douche.short %>"
+                  </div>
+                  <div class="jerk-meta">
+                  Posted on <%= douche.date%>, <a href="<%= douche.link %>">More Info...</a>
+                  </div>
+               </div>
+            <% end %>
+         </div>
+         <div id="foot">
+         </div>
+         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+         <script type="text/javascript" src="/js/stuff.js?v=1"></script>
+      </body>
+   </html>
