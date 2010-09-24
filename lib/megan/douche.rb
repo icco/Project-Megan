@@ -13,6 +13,7 @@ module Megan
       key :password, String, :required => true
       key :short, String, :required => true
       key :long, String
+      key :pic, Boolean
 
       def link
          return "/view/#{self.id}/"
@@ -20,6 +21,14 @@ module Megan
 
       def id
          return self._id
+      end
+
+      def image
+         return pic ? "/image/#{self.id}" : nil
+      end
+
+      def image=
+         pic = true
       end
 
       def Douche.build id
