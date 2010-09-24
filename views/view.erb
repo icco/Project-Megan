@@ -9,15 +9,22 @@
             <%= erb(:header, :layout => false) %>
          </div>
          <div id="main">
-            <ul>
-               <li><%= douche.name %></li>
-               <li><%= douche.date %></li>
-               <li><%= douche.location %></li>
-               <li><%= douche.short %></li>
-               <li><%= douche.long %></li>
-               <li><%= douche.sex %></li>
-            </ul>
-
+            <div class="name">
+               <%= douche.sex ? "Mr." : "Mrs." %>
+               <%= douche.name %>
+            </div>
+            <div class="location">
+               <%= douche.location %>
+            </div>
+            <div class="date">
+               Posted on <%= douche.date %>
+            </div>
+            <div class="short-desc">
+               <%= douche.short %>
+            </div>
+            <div class="long-desc">
+               <%= douche.long %>
+            </div>
          </div>
          <div id="foot">
             <%= erb(:footer, :layout => false) %>

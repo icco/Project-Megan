@@ -24,7 +24,7 @@ module Megan
       end
 
       def image
-         return pic ? "/image/#{self.id}" : nil
+         return pic ? "/image/#{self.id}.png" : "/image/null-person.png"
       end
 
       def image=
