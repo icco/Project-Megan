@@ -1,20 +1,28 @@
 <html>
    <head>
-      <title>Project Megan | <%= douche.name %></title>
-      <link href="/style.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+      <title>Project Megan</title>
+      <link href="/css/style.css?v=1" media="screen" rel="stylesheet" type="text/css" />
    </head>
    <body>
-      <h1>Project Megan (witty logo here)</h1>
-      <ul>
-         <li><%= douche.name %></li>
-         <li><%= douche.date %></li>
-         <li><%= douche.location %></li>
-         <li><%= douche.short %></li>
-         <li><%= douche.long %></li>
-         <li><%= douche.sex %></li>
-      </ul>
+      <div id="container">
+         <div id="head">
+            <%= erb(:header, :layout => false) %>
+         </div>
+         <div id="main">
+            <ul>
+               <li><%= douche.name %></li>
+               <li><%= douche.date %></li>
+               <li><%= douche.location %></li>
+               <li><%= douche.short %></li>
+               <li><%= douche.long %></li>
+               <li><%= douche.sex %></li>
+            </ul>
 
-
+         </div>
+         <div id="foot">
+            <%= erb(:footer, :layout => false) %>
+         </div>
+      </div>
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
       <script type="text/javascript" src="/js/stuff.js?v=1"></script>
