@@ -10,6 +10,7 @@ require 'digest/sha1'
 require 'less'
 require 'rdiscount'
 require 'github/markup'
+require 'json'
 
 # our stuff
 require 'megan/app'

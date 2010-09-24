@@ -25,6 +25,8 @@ module Megan
          d.password = Douche.randPW
          Megan.log d.inspect
          d.save
+
+         d.to_json
       end
 
       get '/view/:id/?' do
