@@ -2,7 +2,7 @@ require 'rake'
 
 desc "Load app into ShotGun"
 task :devel do
-	system "shotgun config.ru"
+	system "shotgun -p 4567 --host `hostname` config.ru"
 end
 
 desc "Load app into Rack"
