@@ -11,6 +11,7 @@ require 'less'
 require 'rdiscount'
 require 'github/markup'
 require 'json'
+require 'aws/s3'
 
 # our stuff
 require 'megan/app'

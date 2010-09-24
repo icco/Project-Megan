@@ -7,3 +7,4 @@ sinatra
 rdiscount
 github-markup
 i18n
+aws-s3
