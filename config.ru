@@ -4,5 +4,5 @@
 require 'lib/megan'
 
 Megan.new
-Megan::App.run!
+run Megan::App
 
