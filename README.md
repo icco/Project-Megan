@@ -9,6 +9,9 @@ be anonymous but give the original author the ability to delete their post.
 
 ## Installation
 
+If for some reason you want to run a local copy, or maybe help development,
+follow the steps below to get a copy running on your machine.
+
 Install the gems by running:
 
     sudo gem install `cat .gems`
