@@ -31,6 +31,17 @@ module Megan
          pic = true
       end
 
+      # You can only delete if you have the correct password.
+      def delete x
+         if self.password == x
+            super
+
+            return true
+         else
+            return false
+         end
+      end
+
       def Douche.build id
          return id ? Douche.find(id) : nil
       end
